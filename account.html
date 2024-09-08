@@ -18,7 +18,7 @@
       <div class="header-container">
         <div class="header-wrapepr d-flex align-items-center justify-content-between">
           <div class="header-left d-flex align-items-center">
-            <div class="header-logo__wrapper"><a class="header-logo" href="index.html"><img class="w-auto" src="images/logo.svg" alt="Логотип сайта"></a></div>
+            <div class="header-logo__wrapper"><a class="header-logo" href="index.html"><img src="images/logo.svg" alt="Логотип сайта"></a></div>
             <nav class="header-nav d-lg-block d-none">
               <ul class="list-unstyled m-0 p-0 d-flex">
                 <li><a class="href-main fs-14" href="about.html">О Бренде</a></li>
@@ -30,7 +30,8 @@
           </div>
           <div class="header-right d-flex align-items-center"><a class="btn header-catalog rounded-pill fs-14 d-none d-lg-block" href="catalog.html">Каталог </a>
             <div class="header-hrefs d-flex"><a class="href-main header-cart d-none d-lg-flex align-items-center" href="cart.html"><i class="icon-local_mall fs-30"></i><span class="fs-14">8</span></a>
-              <button class="btn-inline header-login d-none d-lg-flex align-items-center" data-bs-toggle="modal" data-bs-target=".modal-login"><i class="icon-login fs-30">  </i><span class="fs-14">Войти</span></button><a class="href-main header-menu d-flex d-lg-none align-items-center" href="#mobile-menu"><i class="icon-menu fs-32"></i></a>
+              <button class="btn-inline header-login d-none d-lg-flex align-items-center" data-bs-toggle="modal" data-bs-target=".modal-login"><i class="icon-login fs-30">  </i><span class="fs-14">Войти</span></button>
+              <button class="btn-inline href-main header-menu d-flex d-lg-none align-items-center" data-bs-toggle="modal" data-bs-target=".modal-mmenu"><i class="icon-menu fs-32"></i></button>
             </div>
           </div>
         </div>
@@ -131,25 +132,15 @@
     </footer>
     <div class="sticky-menu d-flex d-lg-none justify-content-center">
       <div class="sticky-menu__wrapper d-flex align-items-center">
-        <div class="sticky-menu__item d-flex justify-content-center"><a class="header-menu d-flex align-items-center" href="#mobile-menu"><i class="icon-menu fs-32"></i></a></div>
+        <div class="sticky-menu__item d-flex justify-content-center">
+          <button class="btn-inline header-menu d-flex align-items-center" data-bs-toggle="modal" data-bs-target=".modal-mmenu"><i class="icon-menu fs-32"></i></button>
+        </div>
         <div class="sticky-menu__item d-flex justify-content-center"><a class="header-cart d-flex align-items-center" href="cart.html"><i class="icon-local_mall fs-32"></i><span class="fs-14">8</span></a></div>
-        <div class="sticky-menu__item d-flex justify-content-center"><a class="header-login d-flex align-items-center" href="#"><i class="icon-login fs-32">           </i></a></div>
+        <div class="sticky-menu__item d-flex justify-content-center">
+          <button class="btn-inline header-login d-flex align-items-center" data-bs-toggle="modal" data-bs-target=".modal-login"><i class="icon-login fs-32">           </i></button>
+        </div>
       </div>
     </div>
-    <nav class="mobile-menu menu-scrolling" id="mobile-menu">
-      <ul>                                  
-        <li class="sub">
-          <div class="d-flex flex-column gap-5 align-items-start"><a class="footer__href d-flex align-items-center justify-content-between gap-20 w-100" href="#catalog.html"><span class="fs-14 p-0">Каталог</span></a><a class="footer__href d-flex align-items-center justify-content-between gap-20 w-100" href="#about.html"><span class="fs-14 p-0">О Бренде</span></a><a class="footer__href d-flex align-items-center justify-content-between gap-20 w-100" href="#reviews.html"><span class="fs-14 p-0">Отзывы</span></a><a class="footer__href d-flex align-items-center justify-content-between gap-20 w-100" href="#content.html"><span class="fs-14 p-0">Как купить</span></a><a class="footer__href d-flex align-items-center justify-content-between gap-20 w-100" href="#contact.html"><span class="fs-14 p-0">Контакты</span></a>
-          </div>
-        </li>
-        <li class="noSub">
-          <div class="d-flex flex-column gap-15 align-items-start">               <a class="fs-18 fw-sb w-auto" href="tel:+88001234567">8 800 123-45-67</a>
-            <div class="footer-social d-flex"><a class="href-white" href="#" title="Написать в Telegram"><i class="fs-24 icon-tg"> </i></a><a class="href-white" href="#" title="Написать в WhatsApp"><i class="fs-24 icon-wa"> </i></a>
-            </div>
-          </div>
-        </li>
-      </ul>
-    </nav>
     <div class="modal fade modal-call" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
@@ -176,7 +167,7 @@
                   <button class="btn btn_main justify-content-center"><span>Заказать звонок</span></button>
                 </div>
                 <label class="main-checkbox">
-                  <input type="checkbox" name="processing"><span class="main-checkbox__item o-0_7 fs-14 fs-xl-16"><i class="icon-checkbox fs-20"></i><span>Согласен на <a href='policy.html' class='text-decoration-underline pointer btn-inline'> обработку персональных данных</a></span></span>
+                  <input type="checkbox" name="processing" checked><span class="main-checkbox__item o-0_7 fs-14 fs-xl-16"><i class="icon-checkbox fs-20"></i><span>Согласен на <a href='policy.html' class='text-decoration-underline pointer btn-inline'> обработку персональных данных</a></span></span>
                 </label>
               </form>
             </div>
@@ -210,7 +201,7 @@
                   <button class="btn btn_main justify-content-center"><span>Заказать звонок</span></button>
                 </div>
                 <label class="main-checkbox">
-                  <input type="checkbox" name="processing"><span class="main-checkbox__item o-0_7 fs-14 fs-xl-16"><i class="icon-checkbox fs-20"></i><span>Согласен на <a href='policy.html' class='text-decoration-underline pointer btn-inline'> обработку персональных данных</a></span></span>
+                  <input type="checkbox" name="processing" checked><span class="main-checkbox__item o-0_7 fs-14 fs-xl-16"><i class="icon-checkbox fs-20"></i><span>Согласен на <a href='policy.html' class='text-decoration-underline pointer btn-inline'> обработку персональных данных</a></span></span>
                 </label>
               </form>
             </div>
@@ -238,7 +229,7 @@
                   <button class="btn btn_main justify-content-center"><span>Получить код по СМС</span></button>
                 </div>
                 <label class="main-checkbox">
-                  <input type="checkbox" name="processing"><span class="main-checkbox__item o-0_7 fs-14 fs-xl-16"><i class="icon-checkbox fs-20"></i><span>Согласен на <a href='policy.html' class='text-decoration-underline pointer btn-inline'> обработку персональных данных</a></span></span>
+                  <input type="checkbox" name="processing" checked><span class="main-checkbox__item o-0_7 fs-14 fs-xl-16"><i class="icon-checkbox fs-20"></i><span>Согласен на <a href='policy.html' class='text-decoration-underline pointer btn-inline'> обработку персональных данных</a></span></span>
                 </label>
                 <hr class="o-0_1 my-0">
                 <div class="modalc-form__input">
@@ -288,7 +279,7 @@
                   </div>
                   <button class="btn btn_main justify-content-center"><span>Оформить заказ</span></button>
                   <label class="main-checkbox">
-                    <input type="checkbox" name="processing"><span class="main-checkbox__item o-0_7 fs-14 fs-xl-16"><i class="icon-checkbox fs-20"></i><span>Согласен на <a href='policy.html' class='text-decoration-underline pointer btn-inline'> обработку персональных данных</a></span></span>
+                    <input type="checkbox" name="processing" checked><span class="main-checkbox__item o-0_7 fs-14 fs-xl-16"><i class="icon-checkbox fs-20"></i><span>Согласен на <a href='policy.html' class='text-decoration-underline pointer btn-inline'> обработку персональных данных</a></span></span>
                   </label>
                 </div>
               </form>
@@ -339,7 +330,7 @@
                   <button class="btn btn_main justify-content-center"><span>Оставить отзыв</span></button>
                 </div>
                 <label class="main-checkbox">
-                  <input type="checkbox" name="processing"><span class="main-checkbox__item o-0_7 fs-14 fs-xl-16"><i class="icon-checkbox fs-20"></i><span>Согласен на <a href='policy.html' class='text-decoration-underline pointer btn-inline'> обработку персональных данных</a></span></span>
+                  <input type="checkbox" name="processing" checked><span class="main-checkbox__item o-0_7 fs-14 fs-xl-16"><i class="icon-checkbox fs-20"></i><span>Согласен на <a href='policy.html' class='text-decoration-underline pointer btn-inline'> обработку персональных данных</a></span></span>
                 </label>
               </form>
             </div>
@@ -360,6 +351,41 @@
                 <p class="o-0_7">Мы скоро свяжемся с вами</p>
               </div>
               <button class="btn btn_main justify-content-center w-100" data-bs-dismiss="modal">Хорошо</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade modal-mmenu" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="btn-close position-absolute end-0 top-0 border-0 ms-auto d-flex bg-transparent" data-bs-dismiss="modal"><i class="icon-close"></i></button>
+          </div>
+          <div class="modal-body">
+            <div class="modalc-mmenu d-flex flex-column align-items-center text-center justify-content-between h-100">
+              <div class="modalc-mmenu__logo"><img src="images/logo.svg" alt="Логотип сайта"></div>
+              <div class="modalc-mmenu__wrapepr d-flex flex-column align-items-center gap-32">
+                <div class="d-flex flex-column align-items-center gap-16"><a class="href-main fs-24 fw-md" href="tel:+88001234567">8 800 123-45-67</a>
+                  <div class="d-flex gap-32"><a class="href-main" href="#" title="Написать в Telegram"><i class="fs-32 icon-tg"></i></a><a class="href-main" href="#" title="Написать в WhatsApp"><i class="fs-32 icon-wa"></i></a>
+                  </div>
+                  <button class="btn btn_main" data-bs-toggle="modal" data-bs-target=".modal-call">Заказать звонок</button>
+                </div>
+                <div class="d-flex gap-32"><a class="d-flex flex-column align-items-center gap-2" href="cart.html"><i class="icon-local_mall fs-30"></i>
+                    <div class="fs-14">8</div></a>
+                  <button class="btn-inline header-login d-flex flex-column align-items-center gap-2" data-bs-toggle="modal" data-bs-target=".modal-login"><i class="icon-login fs-30"></i>
+                    <div class="fs-14">Войти</div>
+                  </button>
+                </div>
+                <div class="d-flex flex-column text-center gap-20"><a class="href-main fs-16" href="catalog.html">Каталог</a><a class="href-main fs-16" href="about.html">О Бренде</a><a class="href-main fs-16" href="content.html">Как купить</a><a class="href-main fs-16" href="contact.html">Контакты</a>
+                </div>
+                <div class="d-flex flex-column align-items-center gap-8"><a class="href-main footer-wb" href="#">
+                    <svg width="160" height="25" viewBox="0 0 160 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path opacity="0.9" d="M67.7021 7.7197C65.883 7.7197 64.2553 8.26225 62.883 9.15587V0.826078H59.0213V16.1771C59.0213 20.8367 62.9149 24.6027 67.6702 24.6027C72.4255 24.6027 76.383 20.8686 76.383 16.1452C76.383 11.4218 72.5532 7.7197 67.7021 7.7197ZM47.7234 7.97501C43.4468 8.38991 39.9362 11.9963 39.9362 16.3048C39.9362 20.8367 43.9255 24.6665 48.5851 24.6665C53.2447 24.6665 57.234 20.8686 57.234 16.3048C57.234 14.358 56.5319 12.6027 55.3511 11.1984L46.8298 0.857993H41.8511L47.7234 7.97501ZM17.9468 17.2622L14.4043 8.32608H11.6915L8.18086 17.2622L4.6383 8.32608H0.425537L6.61703 24.092H9.32979L13.0638 14.7091L16.7979 24.092H19.5106L25.6702 8.32608H21.4894L17.9468 17.2622ZM86.8511 7.75161C82.0319 7.75161 78.1383 11.3899 78.1383 16.0176C78.1383 20.6133 81.5532 24.6665 86.6277 24.6665C89.6596 24.6665 92.117 23.2303 93.8723 20.8048L90.8723 18.4112C90.0106 19.9431 88.3191 20.8367 86.6596 20.8367C84.4894 20.8367 82.3511 19.3367 82.1915 17.1346H94.7979V15.9857C94.766 11.1346 91.4787 7.75161 86.8511 7.75161ZM136 7.75161C131.181 7.75161 127.319 11.3899 127.319 16.2091C127.319 20.741 130.734 24.6346 135.777 24.6346C138.809 24.6346 141.266 23.1984 143.021 20.7729L140.372 18.5708C139.447 19.975 137.755 20.8048 135.713 20.8048C133.702 20.8048 131.5 19.3048 131.34 17.1027H143.883V15.7942C143.883 11.1346 140.628 7.75161 136 7.75161ZM149.468 12.9218C149.468 11.9325 150.84 11.1665 152.628 11.1665C154.415 11.1665 156.394 12.0282 157.67 13.4325L160 10.6559C157.766 8.74097 155.532 7.75161 152.723 7.75161C149.213 7.75161 145.606 9.31544 145.606 12.9218C145.606 17.358 149.532 17.6771 152.723 17.9325C154.511 18.0601 156.106 18.1878 156.106 19.3367C156.106 20.5814 154.287 21.1559 152.723 21.1559C150.681 21.1559 148.734 20.2303 147.426 18.6665L144.936 21.2516C146.915 23.6133 149.787 24.6346 152.596 24.6346C156.106 24.6346 159.968 23.0069 159.968 19.2729C159.968 15.0601 156.011 14.6452 152.979 14.358C151.032 14.1346 149.468 13.975 149.468 12.9218ZM100.606 11.9005V8.32608H96.7447V24.0601H100.606V17.3899C101.117 13.6878 104.149 12.1878 107.66 12.1878V8.32608H107.277C104.309 8.32608 102.138 9.37927 100.606 11.9005ZM112.83 11.9005V8.32608H108.968V24.0601H112.83V17.3899C113.34 13.2091 117.043 12.1878 119.883 12.1878V8.32608H119.468C116.532 8.32608 114.362 9.34736 112.83 11.9005ZM34.1277 24.0601H37.9894V0.857993H34.1277V24.0601ZM48.5851 20.8686C45.9362 20.8686 43.766 18.7942 43.766 16.2091C43.766 13.624 45.9043 11.5176 48.5532 11.5176C51.1702 11.5176 53.4043 13.592 53.4043 16.2091C53.4043 18.8261 51.266 20.8686 48.5851 20.8686ZM67.7021 20.8686C65.0851 20.8686 62.883 18.8261 62.883 16.1771C62.883 13.5282 64.9574 11.5176 67.7021 11.5176C70.4468 11.5176 72.5532 13.592 72.5532 16.1771C72.5532 18.7622 70.3511 20.8686 67.7021 20.8686ZM27.4574 24.0601H31.3192V8.32608H27.4574V24.0601ZM121.511 24.0601H125.372V8.32608H121.511V24.0601ZM29.3404 0.666504C27.7766 0.666504 26.4681 1.9431 26.4681 3.53884C26.4681 5.1665 27.8404 6.28353 29.3404 6.28353C31 6.28353 32.2766 4.91119 32.2766 3.47501C32.2766 2.00693 30.9362 0.666504 29.3404 0.666504ZM123.426 0.666504C121.862 0.666504 120.521 1.9431 120.521 3.53884C120.521 5.13459 121.798 6.28353 123.489 6.28353C125.181 6.28353 126.33 5.1665 126.33 3.60267C126.33 2.03884 125.021 0.666504 123.426 0.666504ZM131.787 13.975C132.426 12.4112 133.798 11.5176 135.809 11.5176C137.819 11.5176 139.064 12.475 139.574 13.975H131.787ZM82.6064 13.975C83.2447 12.4112 84.617 11.5176 86.5957 11.5176C88.6064 11.5176 89.9149 12.475 90.4255 13.975C90.4574 13.975 82.6064 13.975 82.6064 13.975Z">                               </path>
+                    </svg></a>
+                  <div class="fs-14">Мы на маркетплейсах</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
