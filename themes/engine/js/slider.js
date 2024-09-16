@@ -49,7 +49,7 @@ import Swiper, {Autoplay, Navigation, Pagination, Thumbs} from 'swiper';
             navigation: navigation,                                
             slideActiveClass: "active",
             breakpoints: {
-                992: {                    
+                1080: {                    
                     slidesPerView: 3,
                     spaceBetween: 24,                                                
                 },                                 
@@ -78,7 +78,7 @@ import Swiper, {Autoplay, Navigation, Pagination, Thumbs} from 'swiper';
             navigation: navigation,                                
             slideActiveClass: "active",
             breakpoints: {
-                992: {                    
+                1080: {                    
                     slidesPerView: 2,
                     spaceBetween: 24,                                                
                 },                                 
@@ -101,7 +101,7 @@ import Swiper, {Autoplay, Navigation, Pagination, Thumbs} from 'swiper';
             slidesPerView: 'auto',
             direction: 'horizontal',
             breakpoints: {
-                992: {
+                1080: {
                     slidesPerView: 1,
                     direction: 'vertical',
                 },                                  
