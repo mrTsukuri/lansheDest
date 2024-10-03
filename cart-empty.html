@@ -40,13 +40,34 @@
     <main>
       <section class="cart">           
         <div class="container">
-          <div class="cart-wrapper d-flex flex-column align-items-start">
-            <h1 class="fs-20 fs-xl-32 fw-md mb-0">Корзина</h1>
-            <p class="o-0_7">Пеерйдите в каталог для выбора товаров</p><a class="btn btn_main" href="catalog.html">Перейти в каталог</a>
+          <div class="contact-grid">
+            <div class="contact-main d-flex flex-column align-items-start">
+              <div class="contact-main__heading d-flex flex-column align-items-start gap-32">
+                <h1 class="fs-20 fs-lg-32 fw-md mb-0">Корзина пуста</h1>
+                <p>Перейдите в каталог для добавления товаров или свяжитесь с нами, мы поможем с подбором, оформлением и доставкой товара</p><a class="btn btn_main" href="catalog.html">Перейти в каталог</a>
+              </div>
+              <div class="contact-main__feedback d-flex align-items-center justify-content-between flex-wrap">                         <a class="href-main fs-20 fs-lg-32 fw-md" href="tel:88001234567">8 800 123-45-67</a>
+                <div class="contact-main__social d-flex gap-32">                              <a class="href-main contact-main__social-item d-flex align-items-center" href="#" title="Написать в Telegram"><i class="icon-tg fs-32"></i><span class="fs-14 fs-xl-16">Написать <br> в Telegram                                </span></a><a class="href-main contact-main__social-item d-flex align-items-center" href="#" title="Написать в WhatsApp"><i class="icon-wa fs-32"></i><span class="fs-14 fs-xl-16">Написать <br> в WhatsApp</span></a></div>
+              </div>
+            </div>
+            <div class="cart-order d-flex flex-column bg-grey rounded-12">
+              <div class="cart-order__form d-flex flex-column">
+                <div class="fs-14 fs-xl-18 fw-md lh-1_4">Зарегистрируйтесь на сайте для оформления заказа</div>
+                <form class="questions-feedback__form d-flex flex-column" name="cart_order" action="order.html">
+                  <label class="main-input main-input_white">
+                    <input class="w-100" type="tel" name="phone" placeholder="+7 (9__) ___-__-__" required>
+                  </label>
+                  <button class="btn btn_main">Оформить заказ</button>
+                  <label class="main-checkbox">
+                    <input type="checkbox" name="processing" checked><span class="main-checkbox__item o-0_7 fs-14 fs-xl-16"><i class="icon-checkbox fs-20"></i><span>Согласен на <a href='policy.html' class='text-decoration-underline pointer btn-inline'> обработку <br> персональных данных</a></span></span>
+                  </label>
+                </form>
+              </div>
+            </div>
           </div>
         </div>
       </section>
-      <section class="catalog">
+      <section class="catalog" id="products">
         <div class="container">
           <div class="section-heading d-flex align-items-center justify-content-between">
             <h2 class="fs-20 fs-lg-32 fw-md mb-0">Не забудьте добавить в корзину</h2>
