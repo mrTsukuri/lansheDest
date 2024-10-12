@@ -40,56 +40,141 @@
     <main>
       <section class="account">
         <div class="container">
-          <div class="account-heading d-flex">
-            <div class="fs-20 fs-lg-32 fw-md">Мои данные </div><a class="href-opacity fs-20 fs-lg-32 fw-md" href="account-orders.html">Мои заказы</a>
-          </div>
-          <div class="account-block order-main d-flex flex-column">
-            <div class="order-block order-details d-flex flex-column">                       
-              <div class="fs-20 fw-md">Контактные данные                            </div>
-              <div class="order-details__inputs d-flex flex-column">   
-                <div class="order-details__input d-flex">
-                  <label class="main-input main-input_border">
-                    <input class="w-100" type="tel" name="phone" placeholder="+7 (9__) ___-__-__" required>
-                  </label>
-                  <div class="fs-14 fs-xl-16 fw-md">Номер телефона</div>
-                </div>
-                <div class="order-details__input d-flex">
-                  <label class="main-input main-input_border">
-                    <input class="w-100" type="text" name="name" placeholder="Иванов Иван Иванович" required>
-                  </label>
-                  <div class="fs-14 fs-xl-16 fw-md">ФИО</div>
-                </div>
-                <div class="order-details__input d-flex">
-                  <label class="main-input main-input_border">
-                    <input class="w-100" type="email" name="email" placeholder="Ваш email" required>
-                  </label>
-                  <div class="fs-14 fs-xl-16 fw-md">Email</div>
-                </div>
+          <div class="account-tabs d-flex flex-column">               
+            <div class="js-tabs__nav">               
+              <div class="js-tabs__no-marker js-tabs__tabs-container account-heading d-flex scroll">                           
+                <div class="js-tabs__tab fs-20 fs-lg-32 fw-md pointer href-opacity active" data-article="1">Мои данные </div>
+                <div class="js-tabs__tab fs-20 fs-lg-32 fw-md pointer href-opacity" data-article="2">Мои заказы</div>
               </div>
-              <button class="btn btn_main align-self-start">Сохранить</button>
             </div>
-            <div class="order-block order-delivery d-flex flex-column">
-              <div class="fs-20 fw-md">Предпочитаемый адрес доставки</div>
-              <label class="main-input main-input_border">
-                <input class="w-100" type="text" name="address" placeholder="Например: Москва, ул. Ленина, 100, кв. 100" required>
-              </label>
-              <div class="order-delivery__info d-flex">
-                <div class="order-delivery__img"><img class="w-auto" src="images/cdek.svg" alt="СДЭК"></div>
-                <p class="o-0_7">Мы доставляем ТК СДЭК. Стоимость доставки рассчитывается индивидуально и оплачивается при получении заказа.</p>
+            <div class="js-tabs__content-container">                                           
+              <div class="js-tabs__content active" data-article="1">
+                <div class="account-block order-main d-flex flex-column">
+                  <div class="order-block order-details d-flex flex-column">                       
+                    <div class="fs-20 fw-md">Контактные данные                            </div>
+                    <div class="order-details__inputs d-flex flex-column">   
+                      <div class="order-details__input d-flex">
+                        <label class="main-input main-input_border">
+                          <input class="w-100" type="tel" name="phone" placeholder="+7 (9__) ___-__-__" required>
+                        </label>
+                        <div class="fs-14 fs-xl-16 fw-md">Номер телефона</div>
+                      </div>
+                      <div class="order-details__input d-flex">
+                        <label class="main-input main-input_border">
+                          <input class="w-100" type="text" name="name" placeholder="Иванов Иван Иванович" required>
+                        </label>
+                        <div class="fs-14 fs-xl-16 fw-md">ФИО</div>
+                      </div>
+                      <div class="order-details__input d-flex">
+                        <label class="main-input main-input_border">
+                          <input class="w-100" type="email" name="email" placeholder="Ваш email" required>
+                        </label>
+                        <div class="fs-14 fs-xl-16 fw-md">Email</div>
+                      </div>
+                    </div>
+                    <button class="btn btn_main align-self-start">Сохранить</button>
+                  </div>
+                  <div class="order-block order-delivery d-flex flex-column">
+                    <div class="fs-20 fw-md">Предпочитаемый адрес доставки</div>
+                    <label class="main-input main-input_border">
+                      <input class="w-100" type="text" name="address" placeholder="Например: Москва, ул. Ленина, 100, кв. 100" required>
+                    </label>
+                    <div class="order-delivery__info d-flex">
+                      <div class="order-delivery__img"><img class="w-auto" src="images/cdek.svg" alt="СДЭК"></div>
+                      <p class="o-0_7">Мы доставляем ТК СДЭК. Стоимость доставки рассчитывается индивидуально и оплачивается при получении заказа.</p>
+                    </div>
+                    <button class="btn btn_main align-self-start">Сохранить</button>
+                  </div>
+                  <div class="order-block order-payment d-flex flex-column">
+                    <div class="fs-20 fw-md">Предпочитаемый способ оплаты</div>
+                    <div class="order-payment__block d-flex">
+                      <label class="order-payment__label">
+                        <input type="radio" name="payment" checked><span class="order-payment__item d-flex flex-column align-items-start rounded-12 pointer"><span class="order-payment__item-icon d-flex rounded-circle"><i class="icon-check fs-32"></i></span><span class="order-payment__item-desc d-flex align-items-center"><i class="icon-credit_card fs-24"></i><span class="fs-14 fs-xl-16 fw-md">Банковской картой</span></span></span>
+                      </label>
+                      <label class="order-payment__label">
+                        <input type="radio" name="payment"><span class="order-payment__item d-flex flex-column align-items-start rounded-12 pointer"><span class="order-payment__item-icon d-flex rounded-circle"><i class="icon-check fs-32"></i></span><span class="order-payment__item-desc d-flex align-items-center"><img src="images/dolyame-sm.svg" alt=""><span class="fs-14 fs-xl-16 fw-md">Долями по 2 040 ₽</span></span></span>
+                      </label>
+                    </div>
+                    <button class="btn btn_main align-self-start">Сохранить</button>
+                  </div>
+                </div>
               </div>
-              <button class="btn btn_main align-self-start">Сохранить</button>
-            </div>
-            <div class="order-block order-payment d-flex flex-column">
-              <div class="fs-20 fw-md">Предпочитаемый способ оплаты</div>
-              <div class="order-payment__block d-flex">
-                <label class="order-payment__label">
-                  <input type="radio" name="payment" checked><span class="order-payment__item d-flex flex-column align-items-start rounded-12 pointer"><span class="order-payment__item-icon d-flex rounded-circle"><i class="icon-check fs-32"></i></span><span class="order-payment__item-desc d-flex align-items-center"><i class="icon-credit_card fs-24"></i><span class="fs-14 fs-xl-16 fw-md">Банковской картой</span></span></span>
-                </label>
-                <label class="order-payment__label">
-                  <input type="radio" name="payment"><span class="order-payment__item d-flex flex-column align-items-start rounded-12 pointer"><span class="order-payment__item-icon d-flex rounded-circle"><i class="icon-check fs-32"></i></span><span class="order-payment__item-desc d-flex align-items-center"><img src="images/dolyame-sm.svg" alt=""><span class="fs-14 fs-xl-16 fw-md">Долями по 2 040 ₽</span></span></span>
-                </label>
+              <div class="js-tabs__content active" data-article="2">
+                <div class="account-order d-flex flex-column">
+                  <div class="account-order__block d-flex flex-column">
+                    <div class="account-order__info">
+                      <div class="account-order__info-block d-flex flex-column"><a class="href-main fs-16 fw-md" href="account-order.html">Заказ № 12345 на сумму 62 600 ₽</a>
+                        <div class="account-order__info-lists d-flex flex-column">
+                          <div class="account-order__info-list d-flex"><span class="fs-14 fs-xl-16"><span>Дата заказа</span></span><span class="fs-14 fs-xl-16"><span>18.08.2024</span></span></div>
+                          <div class="account-order__info-list d-flex"><span class="fs-14 fs-xl-16"><span>Покупатель</span></span><span class="fs-14 fs-xl-16"><span>Иванов Иван Иванович</span></span></div>
+                          <div class="account-order__info-list d-flex"><span class="fs-14 fs-xl-16"><span>Телефон</span></span><span class="fs-14 fs-xl-16"><span>+7 (123) 456-78-90</span></span></div>
+                          <div class="account-order__info-list d-flex"><span class="fs-14 fs-xl-16"><span>Email</span></span><span class="fs-14 fs-xl-16"><span>ivanov@mail.ru</span></span></div>
+                          <div class="account-order__info-list d-flex"><span class="fs-14 fs-xl-16"><span>Адрес доставки</span></span><span class="fs-14 fs-xl-16"><span>Россия, г. Москва, ул. Ленина, д. 100, к. 2, кв. 100</span></span></div>
+                          <div class="account-order__info-list d-flex"><span class="fs-14 fs-xl-16"><span>Способ оплаты</span></span><span class="fs-14 fs-xl-16"><span>Банковской картой</span></span></div>
+                          <div class="account-order__info-list d-flex"><span class="fs-14 fs-xl-16"><span>Статус оплаты</span></span><span class="fs-14 fs-xl-16"><span>Не оплачен</span></span></div>
+                        </div>
+                      </div>
+                      <div class="account-order__info-buy d-flex flex-column bg-grey rounded-12 justify-content-between">
+                        <div class="fs-14 fs-xl-16 fw-md lh-1_4">Успейте оплатить заказ до его автоматической отмены 25.08.24</div>
+                        <button class="btn btn_main justify-content-center">Оплатить онлайн</button>
+                      </div>
+                    </div>
+                    <div class="account-order__products d-flex flex-column">
+                      <div class="fs-16 fw-md">Товары в заказе</div>
+                      <div class="account-order__products-grid scroll"><a class="account-order__product position-relative rounded-12 overflow-hidden" href="product.html"><img class="h-100" src="images/cart/1.jpg" alt="Патчи 50 шт для наращивания ресниц">
+                          <div class="account-order__product-count rounded-circle bg-white position-absolute fs-14 fw-md">99                                            </div></a><a class="account-order__product position-relative rounded-12 overflow-hidden" href="product.html"><img class="h-100" src="images/cart/1.jpg" alt="Патчи 50 шт для наращивания ресниц">
+                          <div class="account-order__product-count rounded-circle bg-white position-absolute fs-14 fw-md">99                                            </div></a><a class="account-order__product position-relative rounded-12 overflow-hidden" href="product.html"><img class="h-100" src="images/cart/1.jpg" alt="Патчи 50 шт для наращивания ресниц">
+                          <div class="account-order__product-count rounded-circle bg-white position-absolute fs-14 fw-md">99                                            </div></a><a class="account-order__product position-relative rounded-12 overflow-hidden" href="product.html"><img class="h-100" src="images/cart/1.jpg" alt="Патчи 50 шт для наращивания ресниц">
+                          <div class="account-order__product-count rounded-circle bg-white position-absolute fs-14 fw-md">99                                            </div></a><a class="account-order__product position-relative rounded-12 overflow-hidden" href="product.html"><img class="h-100" src="images/cart/1.jpg" alt="Патчи 50 шт для наращивания ресниц">
+                          <div class="account-order__product-count rounded-circle bg-white position-absolute fs-14 fw-md">99                                            </div></a><a class="account-order__product position-relative rounded-12 overflow-hidden" href="product.html"><img class="h-100" src="images/cart/1.jpg" alt="Патчи 50 шт для наращивания ресниц">
+                          <div class="account-order__product-count rounded-circle bg-white position-absolute fs-14 fw-md">99                                            </div></a><a class="account-order__product position-relative rounded-12 overflow-hidden" href="product.html"><img class="h-100" src="images/cart/1.jpg" alt="Патчи 50 шт для наращивания ресниц">
+                          <div class="account-order__product-count rounded-circle bg-white position-absolute fs-14 fw-md">99                                            </div></a><a class="account-order__product position-relative rounded-12 overflow-hidden" href="product.html"><img class="h-100" src="images/cart/1.jpg" alt="Патчи 50 шт для наращивания ресниц">
+                          <div class="account-order__product-count rounded-circle bg-white position-absolute fs-14 fw-md">99                                            </div></a><a class="account-order__product position-relative rounded-12 overflow-hidden" href="product.html"><img class="h-100" src="images/cart/1.jpg" alt="Патчи 50 шт для наращивания ресниц">
+                          <div class="account-order__product-count rounded-circle bg-white position-absolute fs-14 fw-md">99                                            </div></a>
+                        <div class="account-order__more bg-grey rounded-12 d-flex align-items-center justify-content-center text-center pointer">
+                          <div class="fs-16 fw-md">и еще <br> 2 товара</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="account-order__block d-flex flex-column">
+                    <div class="account-order__info">
+                      <div class="account-order__info-block d-flex flex-column"><a class="fs-16 fw-md" href="account-order.html">Заказ № 12345 на сумму 62 600 ₽</a>
+                        <div class="account-order__info-lists d-flex flex-column">
+                          <div class="account-order__info-list d-flex"><span class="fs-14 fs-xl-16"><span>Дата заказа</span></span><span class="fs-14 fs-xl-16"><span>18.08.2024</span></span></div>
+                          <div class="account-order__info-list d-flex"><span class="fs-14 fs-xl-16"><span>Покупатель</span></span><span class="fs-14 fs-xl-16"><span>Иванов Иван Иванович</span></span></div>
+                          <div class="account-order__info-list d-flex"><span class="fs-14 fs-xl-16"><span>Телефон</span></span><span class="fs-14 fs-xl-16"><span>+7 (123) 456-78-90</span></span></div>
+                          <div class="account-order__info-list d-flex"><span class="fs-14 fs-xl-16"><span>Email</span></span><span class="fs-14 fs-xl-16"><span>ivanov@mail.ru</span></span></div>
+                          <div class="account-order__info-list d-flex"><span class="fs-14 fs-xl-16"><span>Адрес доставки</span></span><span class="fs-14 fs-xl-16"><span>Россия, г. Москва, ул. Ленина, д. 100, к. 2, кв. 100</span></span></div>
+                          <div class="account-order__info-list d-flex"><span class="fs-14 fs-xl-16"><span>Способ оплаты</span></span><span class="fs-14 fs-xl-16"><span>Банковской картой</span></span></div>
+                          <div class="account-order__info-list d-flex"><span class="fs-14 fs-xl-16"><span>Статус оплаты</span></span><span class="fs-14 fs-xl-16"><span>Не оплачен</span></span></div>
+                        </div>
+                      </div>
+                      <div class="account-order__info-buy d-flex flex-column bg-grey rounded-12 justify-content-between">
+                        <div class="fs-14 fs-xl-16 fw-md lh-1_4">Заказ полностью оплачен. Приятного пользования!</div>
+                        <button class="btn btn_main justify-content-center">Повторить заказ</button>
+                      </div>
+                    </div>
+                    <div class="account-order__products d-flex flex-column">
+                      <div class="fs-16 fw-md">Товары в заказе</div>
+                      <div class="account-order__products-grid scroll"><a class="href-main account-order__product position-relative rounded-12 overflow-hidden" href="product.html"><img class="h-100" src="images/cart/1.jpg" alt="Патчи 50 шт для наращивания ресниц">
+                          <div class="account-order__product-count rounded-circle bg-white position-absolute fs-14 fw-md">99                                            </div></a><a class="href-main account-order__product position-relative rounded-12 overflow-hidden" href="product.html"><img class="h-100" src="images/cart/1.jpg" alt="Патчи 50 шт для наращивания ресниц">
+                          <div class="account-order__product-count rounded-circle bg-white position-absolute fs-14 fw-md">99                                            </div></a><a class="href-main account-order__product position-relative rounded-12 overflow-hidden" href="product.html"><img class="h-100" src="images/cart/1.jpg" alt="Патчи 50 шт для наращивания ресниц">
+                          <div class="account-order__product-count rounded-circle bg-white position-absolute fs-14 fw-md">99                                            </div></a><a class="href-main account-order__product position-relative rounded-12 overflow-hidden" href="product.html"><img class="h-100" src="images/cart/1.jpg" alt="Патчи 50 шт для наращивания ресниц">
+                          <div class="account-order__product-count rounded-circle bg-white position-absolute fs-14 fw-md">99                                            </div></a><a class="href-main account-order__product position-relative rounded-12 overflow-hidden" href="product.html"><img class="h-100" src="images/cart/1.jpg" alt="Патчи 50 шт для наращивания ресниц">
+                          <div class="account-order__product-count rounded-circle bg-white position-absolute fs-14 fw-md">99                                            </div></a><a class="href-main account-order__product position-relative rounded-12 overflow-hidden" href="product.html"><img class="h-100" src="images/cart/1.jpg" alt="Патчи 50 шт для наращивания ресниц">
+                          <div class="account-order__product-count rounded-circle bg-white position-absolute fs-14 fw-md">99                                            </div></a><a class="href-main account-order__product position-relative rounded-12 overflow-hidden" href="product.html"><img class="h-100" src="images/cart/1.jpg" alt="Патчи 50 шт для наращивания ресниц">
+                          <div class="account-order__product-count rounded-circle bg-white position-absolute fs-14 fw-md">99                                            </div></a><a class="href-main account-order__product position-relative rounded-12 overflow-hidden" href="product.html"><img class="h-100" src="images/cart/1.jpg" alt="Патчи 50 шт для наращивания ресниц">
+                          <div class="account-order__product-count rounded-circle bg-white position-absolute fs-14 fw-md">99                                            </div></a><a class="href-main account-order__product position-relative rounded-12 overflow-hidden" href="product.html"><img class="h-100" src="images/cart/1.jpg" alt="Патчи 50 шт для наращивания ресниц">
+                          <div class="account-order__product-count rounded-circle bg-white position-absolute fs-14 fw-md">99                                            </div></a>
+                        <div class="account-order__more bg-grey rounded-12 d-flex align-items-center justify-content-center text-center pointer">
+                          <div class="fs-16 fw-md">и еще <br> 2 товара                                   </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <button class="btn btn_main align-self-start">Сохранить                                        </button>
             </div>
           </div>
         </div>

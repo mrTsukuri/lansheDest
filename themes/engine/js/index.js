@@ -119,7 +119,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 tab.init();                    
             });            
         }    
-    }         
+    } 
+    tabs('.account-tabs');        
     //spoiler      
     document.querySelectorAll('.spoiler').forEach(item => {
         let btn = item.querySelector('.spoiler-btn');
